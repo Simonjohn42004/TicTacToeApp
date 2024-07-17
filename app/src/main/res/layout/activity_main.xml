@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tictactoebg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Tic Tac Toe"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:id="@+id/tictactoetext"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tictactoetext"
+        android:id="@+id/relativelayout">
+
+        <TextView
+            android:id="@+id/player1text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Player-1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/player2text"
+            android:text="Player-2"
+            android:layout_toEndOf="@id/player1text"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:fontFamily="cursive"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:layout_below="@id/player1text"
+            android:id="@+id/player1scoretext"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/player2scoretext"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:layout_toEndOf="@id/player1scoretext"
+            android:layout_below="@id/player2text"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativelayout"
+        android:id="@+id/boxlinearlayoutf"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="92dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/shape"
+                android:text="X"
+                android:textAlignment="center"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/statustext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boxlinearlayoutf"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="cursive"
+        android:text="Status"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/playagainbutton"
+        android:layout_below="@id/statustext"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gamerestartbutton"
+        android:text="Restart Game"
+        android:layout_below="@id/playagainbutton"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
