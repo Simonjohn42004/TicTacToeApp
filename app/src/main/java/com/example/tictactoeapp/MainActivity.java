@@ -43,15 +43,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Gamebuttons[6]=findViewById(R.id.button6);
         Gamebuttons[7]=findViewById(R.id.button7);
         Gamebuttons[8]=findViewById(R.id.button8);
-
-        for(int i=0;i<9;i++){
-            Gamebuttons[i].setOnClickListener(this);
-        }
+        Playagainbutton=findViewById(R.id.playagainbutton);
+        restartbutton=findViewById(R.id.gamerestartbutton);
 
         Playeroneactive=true;
         playeronescorecount=0;
         playertwoscorecount=0;
         count=0;
+
+        for(int i=0;i<9;i++){
+            Gamebuttons[i].setOnClickListener(this);
+        }
+
+
 
 
 
@@ -60,14 +64,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(((Button) v).getText().toString().isEmpty()){
+        if(!((Button) v).getText().toString().equals("")){
             return;
         }
         else if(checkWinner()){
             return;
         }
 
-        else{
             String ButtonId= v.getResources().getResourceEntryName(v.getId());
             int gamepointer=Integer.parseInt(ButtonId.substring(ButtonId.length()-1));
             if(Playeroneactive){
@@ -75,8 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 gamepositions[gamepointer]=0;
             }
             else{
-                ((Button)v).setText("X");
-                gamepositions[gamepointer]=0;
+                ((Button)v).setText("o");
+                gamepositions[gamepointer]=1;
             }
             count++;
             if(checkWinner()){
@@ -99,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             else {
                 Playeroneactive = !Playeroneactive;
             }
-        }
 
         Playagainbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,10 +126,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void playAgain() {
+        Playeroneactive=true;
         for(int i=0;i<9;i++){
             Gamebuttons[i].setText("");
             gamepositions[i]=2;
         }
+        gamestatustext.setText("Status");
     }
 
     private void updateScoreCount() {
